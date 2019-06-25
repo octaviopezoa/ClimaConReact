@@ -6,7 +6,9 @@ console.log(devMode);
 
 
 module.exports = {
-    entry: './src/app/index.js',
+    entry: [
+        '@babel/polyfill',
+        './src/app/index.js'],
     output: {
         path: __dirname + '/build',
         filename: 'bundle.js'
